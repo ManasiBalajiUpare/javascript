@@ -1,0 +1,104 @@
+<html>
+<head>
+<title> calculator application</title>
+<style>
+body{
+background-color:gray;
+
+}
+.buttons
+{
+display:flex;
+justify-content:space-between;
+width:20%:
+height:200px;
+border-radius:50%;
+
+}
+
+
+</style>
+
+</head>
+<body>
+<h1>Arithmatic Operation</h1>
+<div>
+<input type='number'id="value1" placeholder="ENter your first value">
+<br><br>
+<input type='number'id="value2" placeholder="ENter your second value">
+<br><br>
+<input type='text'  id="result" placeholder="Result">
+</div>
+<div class="buttons">
+<button onclick="Addition()">1</button>
+<button onclick="Addition()">2</button>
+<button onclick="Addition()">3</button>
+<button onclick="Addition()">4</button>
+<button onclick="Addition()">5</button>
+<button onclick="Addition()">6</button>
+<button onclick="Addition()">7</button>
+<button onclick="Addition()">8</button>
+<button onclick="Addition()">9</button>
+<button onclick="Addition()">0</button>
+
+
+<button onclick="Addition()">+</button>
+
+<button onclick="Addition()">+</button>
+<button onclick="Subtraction()">-</button>
+<button onclick="Multiplication()">*</button>
+<button onclick=" Division()">/</button>
+
+</div>
+<script>
+function Addition()
+{
+		
+		let first=document.getElementById("value1").value;
+		console.log(first);
+		let second=document.getElementById("value2").value;
+		let result=parseInt(first)+parseInt(second);
+		console.log(result);
+		 let s =document.getElementById("result");
+		 s.value=result;
+		
+}
+		function Subtraction()
+		{
+		
+		let first=document.getElementById("value1").value;
+		console.log(first);
+		let second=document.getElementById("value2").value;
+		let result=parseInt(first)-parseInt(second);
+		console.log(result);
+		 let s =document.getElementById("result");
+		 s.value=result;
+		
+		}
+		function Multiplication()
+		{
+		
+		let first=document.getElementById("value1").value;
+		console.log(first);
+		let second=document.getElementById("value2").value;
+		let result=parseInt(first)*parseInt(second);
+		console.log(result);
+		 let s =document.getElementById("result");
+		 s.value=result;
+		
+		}
+		function Division()
+		{
+		
+			let first=document.getElementById("value1").value;
+			console.log(first);
+			let second=document.getElementById("value2").value;
+			let result=parseInt(first)/parseInt(second);
+			console.log(result);
+			let s =document.getElementById("result");
+			s.value=result;
+		
+}
+</script>
+</body>
+</html>

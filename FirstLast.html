@@ -1,0 +1,24 @@
+<html
+<head>
+<title>swap first and last digit</title>
+<script type='text/javascript'>
+let a=prompt("enter your number");
+let num=parseInt(a);
+console.log("Before swapping "+num);
+let rem;
+let first;
+let last;
+last=num%10;
+num=parseInt(num/10);
+first=parseInt(num/1000);
+num=num%1000;
+last=last*10000;
+num=num*10;
+num=last+num+first;
+console.log("After swapaing"+num);
+
+</script>
+</head>
+<body>
+</body>
+</html>
