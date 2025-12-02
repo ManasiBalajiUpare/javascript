@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function createTag(){
+            let myHeading=document.createElement("h1");
+            myHeading.innerHTML="hey i am heading of javascript";
+            myHeading.style.backgroundColor="red";
+            myHeading.style.color="white";
+            myHeading.style.padding="10px";
+            myHeading.style.borderRadius="15px";
+            myHeading.style.width="600px";
+            myHeading.style.marginLeft="200px";
+             let bodyTag=document.getElementById("b");
+             bodyTag.appendChild(myHeading);
+
+        }
+    </script>
+    <style>
+        input{
+            width: 400px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div id="b"></div>
+    <input type="button" name="s" value="Create Heading" onclick="createTag()"/>
+</body>
+</html>

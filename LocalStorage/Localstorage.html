@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    input{
+        width: 400px;
+        height: 40px;
+    }
+</style>
+<script type="text/javascript">
+    function saveData(){
+        let name=document.getElementById("n").value;
+        let email=document.getElementById("e").value;
+        let contact=document.getElementById("c").value;
+        localStorage.setItem("un",name);
+        localStorage.setItem("ue",email);
+        localStorage.setItem("uc",contact);
+        let heading=document.getElementById("h");
+        heading.innerHTML="Data Save Sucessfully";
+        heading.style.padding="10px";
+        heading.style.borderRadius="10px";
+        heading.style.color="green";
+
+    }
+    function viewData(){
+        let div=document.getElementById("d");
+        div.innerHTML="";
+        let nameHead=document.createElement("h1");
+        let emailHead=document.createElement("h1");
+        let contactHead=document.createElement("h1"); 
+        let name=localStorage.getItem("un");
+
+        let email=localStorage.getItem("ue");
+        let contact=localStorage.getItem("uc");
+        nameHead.innerHTML=name;     
+        nameHead.style.padding="10px";
+         emailHead.innerHTML=email;
+         emailHead.style.padding="10px";
+          contactHead.innerHTML=contact;
+         contactHead.style.padding="10px";
+
+
+        div.appendChild(nameHead);
+        div.appendChild(emailHead);
+        div.appendChild(contactHead);
+    }
+
+</script>
+</head>
+<body>
+    <input type="text" name="name" id="n" value=""/><br><br>
+    <input type="text" name="email" id="e" value=""/><br><br>
+    <input type="text" name="contact" id="c" value=""/><br><br>
+    <input type="submit" name="s" value="ADD DATA" onclick="saveData()"/>  <!-- ❌ Line 63 → Missing parentheses: should be onclick="saveData()" -->
+    <br><br>
+    <input type="button" name="s1" value="View Data " onclick=" viewData()"/><br><br>
+    
+
+    <h1 id="h"></h1>
+    <div id="d">
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function createTag() {
+    let myTextBox = document.createElement("input");
+    myTextBox.setAttribute("type", "text");
+    myTextBox.setAttribute("name", "name");
+    myTextBox.setAttribute("value", "100");
+
+    let container = document.getElementById("c");
+    container.appendChild(myTextBox); // ✅ append the element, not a string
+}
+
+
+    </script>
+    <style>
+        input{
+            width: 400px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body id="b">
+    &nbsp;&nbsp;
+    <input type="button" name="s" value="print table"onclick="createTag()"/>
+    <br><br>
+    <div id="c">
+
+    </div>
+    
+</body>
+</html>

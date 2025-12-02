@@ -1,0 +1,105 @@
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: blueviolet;
+  color: yellow;
+  text-align: center;
+  padding: 40px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.container {
+  margin-bottom: 20px;
+}
+
+/* Input styling */
+input {
+  padding: 10px;
+  font-size: 16px;
+  width: 250px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: antiquewhite;
+  border-bottom: 2px solid yellow;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  box-shadow: 0 0 10px yellow;
+}
+
+/* Button styling */
+button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: yellow;
+  color: rgb(30, 27, 28);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100px;
+  height: 40px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: orange;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px yellow;
+}
+
+/* Task list styling */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+li {
+  margin: 10px auto;
+  background: #3d1a64;
+  color: yellow;
+  padding: 10px 15px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
+  transition: 0.3s ease;
+}
+
+li:hover {
+  background-color: #5e2d91;
+}
+
+/* Delete button */
+.delete-btn {
+  background-color: red;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.delete-btn:hover {
+  background-color: darkred;
+}
+
+/* Completed task */
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* Message text */
+#message {
+  margin-top: 20px;
+  color: #ffa726;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function accessHeading(){
+
+        
+        document.getElementById("second").value=""+parseInt(document.getElementById("first").value)*
+        parseInt(document.getElementById("first").value);
+        }
+    </script>
+    <style>
+        input{
+            width: 400px;
+            height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" name="f" id="first" value=""/><br><br>
+    <input type="text" name="s" id="second" value=""/><br><br>
+    <input type="button" name="s" value="Calculate Square" onclick="accessHeading()"/>
+    <br><br>
+    
+</body>
+</html>

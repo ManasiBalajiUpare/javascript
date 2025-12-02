@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiplication Table</title>
+
+  <script type="text/javascript">
+    let val;
+
+    function acceptValue(str) {
+      val = parseInt(str);
+    }
+
+    function createTag() {
+      // Clear previous table
+      document.getElementById("c").innerHTML = "";
+
+      // Create table
+      let mytable = document.createElement("table");
+      mytable.border = "1px solid ";
+      //mytable.style.margin = "20px auto";
+      mytable.style.textAlign = "center";
+
+      // Table headings
+      let row = document.createElement("tr");
+      let tableheadingarr = ["Iteration", "x", "Number", "=", "Result"];
+
+      for (let i = 0; i < tableheadingarr.length; i++) {
+        let th = document.createElement("th");
+        th.innerHTML = tableheadingarr[i];
+        row.appendChild(th);
+      }
+      mytable.appendChild(row);
+
+      // Table rows
+      for (let i = 1; i <= 10; i++) {
+        row = document.createElement("tr");
+
+        let td1 = document.createElement("td");
+        td1.innerHTML = i;
+        row.appendChild(td1);
+
+        let td2 = document.createElement("td");
+        td2.innerHTML = "x";
+        row.appendChild(td2);
+
+        let td3 = document.createElement("td");
+        td3.innerHTML = val;
+        row.appendChild(td3);
+
+        let td4 = document.createElement("td");
+        td4.innerHTML = "=";
+        row.appendChild(td4);
+
+        let td5 = document.createElement("td");
+        td5.innerHTML = i * val;
+        row.appendChild(td5);
+
+        mytable.appendChild(row);
+      }
+
+      // Append to page
+      document.getElementById("c").appendChild(mytable);
+    }
+  </script>
+
+  <style>
+    input {
+      width: 200px;
+      height: 40px;
+      
+    }
+  </style>
+</head>
+
+<body id="b">
+  <input type="text" id="txt" placeholder="Enter a number" onkeyup="acceptValue(this.value)">
+  <input type="button" value="Print Table" onclick="createTag()">
+  <div id="c"></div>
+</body>
+</html>
